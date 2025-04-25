@@ -23,6 +23,11 @@ print('main 함수 실행');
 
 int number = 0;
 
+Timer(
+  Duration(기간 입력),
+  (){실행할 함수 입력},
+);
+
 Timer.periodic(
   Duration(seconds:1),
   (Timer timer){ // timer.cancel()을 사용하기 위해서 Timer 인스턴스를 매개변수로 받는다.
@@ -31,9 +36,9 @@ Timer.periodic(
 
     if(number == 5){
       timer.cancel();
-}
-}
-)
+      }
+    }
+  )
 }
 ```
 
