@@ -1,0 +1,17 @@
+# 프로젝트 목표
+
+  1. DateTime 실전
+
+  2. MediaQuery 사용해보기
+
+  3. DatePicker 사용해보기
+
+  4. 여러개의 위젯으로 코드 정리하기
+
+  5. 폰트 적용해보기
+
+  6. 테마 사용해보기
+
+  ### MediaQuery.of(context)
+
+  빌드 함수 안에 context 가 있는 이유가 context가 있어야만 실행할 수 있는 함수나 생성자들이 존재하기 때문이다.
