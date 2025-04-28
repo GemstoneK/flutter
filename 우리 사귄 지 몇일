@@ -12,6 +12,45 @@
 
   6. 테마 사용해보기
 
-  ### MediaQuery.of(context)
+### MediaQuery.of(context).size.width
 
-  빌드 함수 안에 context 가 있는 이유가 context가 있어야만 실행할 수 있는 함수나 생성자들이 존재하기 때문이다.
+빌드 함수 안에 context 가 있는 이유가 context가 있어야만 실행할 수 있는 함수나 생성자들이 존재하기 때문이다.
+
+MediaQuery.of(context)는 앱의 화면정보를 가져올 수 있는 기능이다.
+
+화면 너비의 정확한 값을 가져와준다.
+
+double.infinity와 똑같아 보이는데 차이점은 2로 나누는 등에 연산을 할 수 있다는 것이다.
+
+ex) MediaQuery.of(context).size.width / 2
+
+
+### SafeArea
+
+화면에 노치 같은 게 가리지 않도록 할 수 있다.
+
+top, bottom, left, right 같은 파라미터가 있으며 true, false 를 넣어 활성화 시킬건지, 비활성화할 건지 설정할 수 있다.
+  
+
+## 폰트
+
+```
+Font(
+      style: FontStyle(
+      color: Colors.white,
+      fontSize: 숫자,
+      fontFamily: '폰트 이름',
+      )
+)
+```
+
+## 아이콘 버튼
+
+```
+IconButton(
+  color: Colors.red,
+  iconSize: 숫자,
+  onPressed: (){},
+  icon: Icon(Icons.home),
+)
+```
