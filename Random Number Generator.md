@@ -96,7 +96,7 @@ class _Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded( // 빈 공간은 Body가 나먹음
+    return Expanded( // 빈 공간은 Body가 다먹음
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center, // 세로축으로 가운데 정렬
         children: numbers.map((e) => e.toString().split('')).toList().map((e) =>Row(
@@ -139,3 +139,32 @@ ElevatedButton(onPressed: onPressed,
             foregroundColor: Colors.white),
         child: Text('생성하기!'));
 ```
+
+
+## 큐와 스택
+
+### 스택
+
+LIFO Last in First out
+
+
+### 큐
+
+FIFO First in First out
+
+### 컨텍스트
+
+컨텍스트는 위젯트리에 대한 정보를 들고 있다.
+
+## 화면 전환하기
+
+화면을 전환할 때는 Navigator 함수를 사용해야하는데, Navigator 함수는 context를 필요로 한다.
+
+Stateless 위젯에서는 context가 전역으로 사용이 불가능하기 때문에 매개변수로 넘겨줘야 하지만, Stateful 위젯은 전역적으로 사용이 가능하다.
+
+또 화면을 전환하기 위해서는 MaterialPageRoute 클래스의 도움을 받아야한다.
+
+Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){return 페이지()}))
+
+Navigator.of(context).pop()
+
