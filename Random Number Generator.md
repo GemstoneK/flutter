@@ -172,12 +172,12 @@ Navigator.of(context).pop()
 # 완성본
 
 ```
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:random_number_generator/component/number_to_image.dart';
 import 'package:random_number_generator/constant/color.dart';
 import 'dart:math';
 
-import 'package:random_number_generator/screen/setting_screen.dart';
+import 'package:random_number_generator/screen/setting_screen.dart'; // 세팅스크린
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -189,7 +189,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<int> numbers = [
     123, 456, 789];
-  int maxNumber = 1000;
+  int maxNumber = 1000; // 맥스넘버 추가
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -215,13 +215,13 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  onSettingIconPressed() async{
+  onSettingIconPressed() async{ // 동기화
     final result = await Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){return SettingScreen(maxNumber: maxNumber,);}));
 
     maxNumber = result;
   }
 
-  generateRandomNumber(){
+  generateRandomNumber(){ //랜덤넘버
     final rand = Random();
 
     final List<int> newNumbers = [];
